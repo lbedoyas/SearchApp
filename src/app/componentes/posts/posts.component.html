@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Ejemplo de un filtro con pipes</h1>
+
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="busqueda" name="filterPost" [(ngModel)]="filterPost">
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">nombre </th>
+      <th scope="col">Precio</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Embalaje</th>
+      <th scope="col">id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of datos | filter: filterPost" >
+      <td>{{dato.nameProduct}}</td>
+      <td>{{dato.priceProduct}}</td>
+      <td>{{dato.category}}</td>
+      <td>{{dato.packaging}}</td>
+      <td>{{dato.idProduct}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
